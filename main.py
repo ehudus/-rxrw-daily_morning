@@ -44,13 +44,13 @@ def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
 def get_start():
-  return '2018-11-10'
+  return '2018年-11月-10日'
 
 client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
 wea, temperature = get_weather()
-data = {"weather":{"value":wea,"color":get_random_color()},"temperature":{"value":temperature,"color":get_random_color()},"love_days":{"value":get_count(),"color":get_random_color()},"birthday_left":{"value":get_birthday(),"color":get_random_color()},"words":{"value":get_words(), "color":get_random_color()},"start_day":{"value":'2018年-11月-10日',"color":get_random_color()},}
+data = {"weather":{"value":wea,"color":get_random_color()},"temperature":{"value":temperature,"color":get_random_color()},"love_days":{"value":get_count(),"color":get_random_color()},"birthday_left":{"value":get_birthday(),"color":get_random_color()},"words":{"value":get_words(), "color":get_random_color()},"start_day":{"value":get_start(),"color":get_random_color()},}
 res = wm.send_template(user_id, template_id, data)
 print(res)
 '''
