@@ -58,11 +58,4 @@ data = {"weather":{"value":wea,"color":get_random_color()},
         "start_day":{"value":get_start(),"color":get_random_color()},}
 res = wm.send_template(user_id, template_id, data)
 print(res)
-'''
- 今天天气：{{ weather.DATA }} 
-当前温度：{{ temperature.DATA }} 
-我们已经相恋 {{ love_days.DATA }} 天啦 
-初识：{{ start_day.DATA }} 
-距离你的生日还有：{{ birthday_left.DATA }} 天 
-{{ words.DATA }}
-'''
+ 
